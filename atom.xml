@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>他说</title>
+  
+  
+  <link href="https://chriswen96.com/atom.xml" rel="self"/>
+  
+  <link href="https://chriswen96.com/"/>
+  <updated>2020-10-13T07:47:11.404Z</updated>
+  <id>https://chriswen96.com/</id>
+  
+  <author>
+    <name>Chris(Tao) Wen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://chriswen96.com/2020/09/21/%E5%BC%80%E7%AF%87/"/>
+    <id>https://chriswen96.com/2020/09/21/%E5%BC%80%E7%AF%87/</id>
+    <published>2020-09-21T06:11:14.000Z</published>
+    <updated>2020-10-13T07:47:11.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我有一些故事&lt;/p&gt;
+&lt;p&gt;让他们就这么老去</summary>
+        
+      
+    
+    
+    
+    <category term="他说" scheme="https://chriswen96.com/categories/%E4%BB%96%E8%AF%B4/"/>
+    
+    
+    <category term="他说" scheme="https://chriswen96.com/tags/%E4%BB%96%E8%AF%B4/"/>
+    
+  </entry>
+  
+</feed>
