@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于我</title>
+    <url>/2020/10/14/about-me/</url>
+    <content><![CDATA[<center>
+
+<p>悲伤或许有</p>
+<p>痛苦或许很多</p>
+<p>但是我想</p>
+<p>还有很多梦想未醒</p>
+<p>世界很大</p>
+<p>风住过这里</p>
+</center>
+
+
+
+
+]]></content>
+      <tags>
+        <tag>他说</tag>
+        <tag>关于我</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开篇</title>
     <url>/2020/09/21/%E5%BC%80%E7%AF%87/</url>
-    <content><![CDATA[<p>我有一些故事</p>
+    <content><![CDATA[<img src='/images/rain.png'>
+
+<center>
+
+<p>我有一些故事</p>
 <p>让他们就这么老去 有些不妥</p>
-<p>在这个落雨的午后</p>
+<p>在这个落雨的夜晚</p>
 <p>我把他们都讲给你听</p>
+</center>
 ]]></content>
       <categories>
         <category>他说</category>
