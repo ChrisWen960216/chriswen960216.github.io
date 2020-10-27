@@ -91,4 +91,30 @@
         <tag>他说</tag>
       </tags>
   </entry>
+  <entry>
+    <title>二叉树的前序遍历</title>
+    <url>/2020/10/27/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/</url>
+    <content><![CDATA[<blockquote>
+<p>Leetcode 每日一题 - 144. 二叉树的前序遍历 思路</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二叉树，返回前序遍历。</p>
+<p>特别的: 通过迭代而不是递归完成</p>
+<h2 id="递归解法"><a href="#递归解法" class="headerlink" title="递归解法"></a>递归解法</h2><p>我认为二叉树的遍历就如同数学公式，前中后序遍历相差无几，递归的算法极其简单:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">travelNode</span>(<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 前序: callback(node);</span></span><br><span class="line">  travelNode(node.left);</span><br><span class="line">  <span class="comment">// 中序: callback(node);</span></span><br><span class="line">  travelNode(node.right);</span><br><span class="line">  <span class="comment">// 后序: callback(node);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="迭代算法"><a href="#迭代算法" class="headerlink" title="迭代算法"></a>迭代算法</h2><p>迭代和递归的区别在于一个是循环，一个是调用本身。</p>
+<p>同时，递归始终可以改成迭代。并且递归是通过调用栈层层调用，即将调用的所有函数全部压入调用栈然后再挨个弹出执行，可能会导致<code>栈溢出</code>的问题。而迭代则是占用事件队列，当当前事件完成后立刻进行下一次的执行，不会造成<code>栈溢出</code>的问题。</p>
+<p>再重复一遍: <code>递归始终可以改成迭代/循环</code>。</p>
+<p>本题思路:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">preorderTraversal</span> (<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> result = [];</span><br><span class="line">    <span class="keyword">if</span>(!root)&#123; <span class="keyword">return</span> result; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> stack = [root];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过栈来将递归改成循环</span></span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">      <span class="keyword">const</span> current = stack.pop();</span><br><span class="line">      </span><br><span class="line">      result.push(current.val);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(current.right)&#123;</span><br><span class="line">        stack.push(current.right);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(current.left)&#123;</span><br><span class="line">        stack.push(current.left);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>

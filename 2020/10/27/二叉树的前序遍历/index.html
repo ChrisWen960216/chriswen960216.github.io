@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    二叉树 |  他说
+    二叉树的前序遍历 |  他说
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -47,7 +47,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-二叉树"
+  id="post-二叉树的前序遍历"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -58,15 +58,15 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  二叉树
+  二叉树的前序遍历
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/10/15/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
-  <time datetime="2020-10-15T06:24:34.000Z" itemprop="datePublished">2020-10-15</time>
+      <a href="/2020/10/27/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="article-date">
+  <time datetime="2020-10-27T08:48:41.000Z" itemprop="datePublished">2020-10-27</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
@@ -77,7 +77,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">740</span>
+            <span class="post-count">318</span>
         </span>
     </span>
 
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -102,40 +102,20 @@
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>学习算法和数据结构时，对于二叉树的一些总结</p>
+<p>Leetcode 每日一题 - 144. 二叉树的前序遍历 思路</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>二叉树是一个联通的无环图，有了根节点之后，每个顶点定义了唯一的父节点，和最多两个子节点。并且严格区分左子树，右子树，子树是有序不可颠倒的。</p>
-<h2 id="具象化"><a href="#具象化" class="headerlink" title="具象化"></a>具象化</h2><p>二叉树的每一个节点由熟悉的<code>JavaScript</code>来进行构造，就会是如下方式:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(value = null, left = null, right = null) &#123;</span><br><span class="line">    <span class="built_in">this</span>.value = value;</span><br><span class="line">    <span class="built_in">this</span>.left = left;</span><br><span class="line">    <span class="built_in">this</span>.right = right;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如下的一棵二叉树:<br><img src='/images/tree.png' alt='sample_binary_tree'></p>
-<p>如果用<code>JavaScript</code>彻底展开构造的话，会是这个样子:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  value: <span class="number">3</span>,</span><br><span class="line">  left: &#123;</span><br><span class="line">    value: <span class="number">9</span>,</span><br><span class="line">    left: <span class="literal">null</span>,</span><br><span class="line">    right: <span class="literal">null</span></span><br><span class="line">  &#125;,</span><br><span class="line">  right: &#123;</span><br><span class="line">    value: <span class="number">20</span>,</span><br><span class="line">    left: &#123;</span><br><span class="line">      value: <span class="number">15</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right: &#123;</span><br><span class="line">      value: <span class="number">7</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>一般来说对二叉树进行操作时，不会将一整棵树的结构全部写出。通常采用一定的顺序对树的节点进行操作，而二叉树的重点也在于此。</p>
-<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><p>遍历就是按照一定的顺序浏览一棵树的每一个节点，一般来说遍历有三种方式：</p>
-<ol>
-<li>前序遍历：先访问当前节点，再访问左节点，再访问右节点</li>
-<li>中序遍历：先访问左节点，再访问当前节点，再访问右节点</li>
-<li>后序遍历：先访问左节点，再访问右节点，再访问当前节点</li>
-</ol>
-<p>用代码来解释的话是如下方式:</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二叉树，返回前序遍历。</p>
+<p>特别的: 通过迭代而不是递归完成</p>
+<h2 id="递归解法"><a href="#递归解法" class="headerlink" title="递归解法"></a>递归解法</h2><p>我认为二叉树的遍历就如同数学公式，前中后序遍历相差无几，递归的算法极其简单:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">travelNode</span>(<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 前序: callback(node);</span></span><br><span class="line">  travelNode(node.left);</span><br><span class="line">  <span class="comment">// 中序: callback(node);</span></span><br><span class="line">  travelNode(node.right);</span><br><span class="line">  <span class="comment">// 后序: callback(node);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="用例"><a href="#用例" class="headerlink" title="用例"></a>用例</h2><p>二叉树的核心就是遍历方法，使用遍历几乎可以搞定二叉树的所有问题。</p>
-<ol>
-<li><p>二叉树的深度：二叉树的深度等于于它最长路径（根-叶子）的长度。只需要通过<code>遍历</code>求得所有路径长度再取最大值即可。这是 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/">LeetCode 原题: 二叉树的深度 </a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxDepth</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  travelNode(root, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">travelNode</span>(<span class="params">node, depth</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!node.left &amp;&amp; !node.right) &#123;</span><br><span class="line">      result = <span class="built_in">Math</span>.max(result, depth);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">      travelNode(node.left, depth + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">      travelNode(node.right, depth + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>合并两棵二叉树：通过<code>遍历</code>获得两棵二叉树的节点值，将目标树合并到根数上即可。这是<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-two-binary-trees/">LeetCode 原题：合并二叉树</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mergeTrees</span>(<span class="params">t1, t2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!t2) &#123;</span><br><span class="line">    <span class="keyword">return</span> t1;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!t1) &#123;</span><br><span class="line">    <span class="keyword">return</span> t2;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  t2.val = t2.val + t1.val;</span><br><span class="line">  t2.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">  t2.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">  <span class="keyword">return</span> t2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">travelNode</span>(<span class="params">node, root</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!node.left &amp;&amp; !node.right) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">    root.left</span><br><span class="line">      ? (root.left.val = root.left.val + node.left.val)</span><br><span class="line">      : (root.left = <span class="keyword">new</span> TreeNode(node.left.val));</span><br><span class="line">    travelNode(node.left, root.left);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">    root.right</span><br><span class="line">      ? (root.right.val = root.right.val + node.right.val)</span><br><span class="line">      : (root.right = <span class="keyword">new</span> TreeNode(node.right.val));</span><br><span class="line">    travelNode(node.right, root.right);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>树的遍历无非就是<code>迭代</code>和<code>递归</code>。三种常见的遍历方式的区别取决于何时处理当前节点。</p>
- 
+<h2 id="迭代算法"><a href="#迭代算法" class="headerlink" title="迭代算法"></a>迭代算法</h2><p>迭代和递归的区别在于一个是循环，一个是调用本身。</p>
+<p>同时，递归始终可以改成迭代。并且递归是通过调用栈层层调用，即将调用的所有函数全部压入调用栈然后再挨个弹出执行，可能会导致<code>栈溢出</code>的问题。而迭代则是占用事件队列，当当前事件完成后立刻进行下一次的执行，不会造成<code>栈溢出</code>的问题。</p>
+<p>再重复一遍: <code>递归始终可以改成迭代/循环</code>。</p>
+<p>本题思路:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">preorderTraversal</span> (<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> result = [];</span><br><span class="line">    <span class="keyword">if</span>(!root)&#123; <span class="keyword">return</span> result; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> stack = [root];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过栈来将递归改成循环</span></span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">      <span class="keyword">const</span> current = stack.pop();</span><br><span class="line">      </span><br><span class="line">      result.push(current.val);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(current.right)&#123;</span><br><span class="line">        stack.push(current.right);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(current.left)&#123;</span><br><span class="line">        stack.push(current.left);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -153,19 +133,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2020/10/27/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            二叉树的前序遍历
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/10/14/about-me/" class="article-nav-link">
+      <a href="/2020/10/15/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">关于我</div>
+        <div class="article-nav-title">二叉树</div>
       </a>
     
   </nav>
