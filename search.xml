@@ -117,4 +117,83 @@
         <tag>技术</tag>
       </tags>
   </entry>
+  <entry>
+    <title>固定团智能计划V1.0发布</title>
+    <url>/2020/10/28/%E5%9B%BA%E5%AE%9A%E5%9B%A2%E6%99%BA%E8%83%BD%E8%AE%A1%E5%88%92V1-0%E5%8F%91%E5%B8%83/</url>
+    <content><![CDATA[<blockquote>
+<p>隆重为你介绍 固定团智能计划V1.0 版本</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li><p>各位团长可以创建自定义团队排表，并发给团员，团员通过团队ID/登记链接进行自己的团队登记，从而方便管理每一车副本的人员信息。</p>
+</li>
+<li><p>团队的每一位角色都可以被团长/团员定制，包括门派、游戏角色ID和使用本号打本的团员ID，三者之间没有耦合，方便满足 专职叫老板登/专职上号打本 等各种角色的团员登记。</p>
+</li>
+</ul>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li><p>免费！</p>
+</li>
+<li><p>简单的操作流程，你甚至都不用登录，更不需要注册。对懒人极其友好。</p>
+</li>
+<li><p>高度的自定义团队每一位成员，包括门派、游戏角色ID和上号团员的ID。亦或者什么都不设置，一键创建团队排表。</p>
+</li>
+<li><p>不要求登记任何账号密码，亦不要求绑定任何角色，个人 游戏/三次元 信息安全无忧。</p>
+</li>
+<li><p>无需手动输入 团队/个人ID，点击即可复制粘贴，解放双手。</p>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>微信搜索: <code>固定团智能计划</code></p>
+</li>
+<li><p>直接用微信扫描该二维码直接打开.</p>
+</li>
+</ul>
+<img src='/images/ga/qrcode.jpg' />
+
+<h2 id="使用截图"><a href="#使用截图" class="headerlink" title="使用截图"></a>使用截图</h2><ul>
+<li>首页</li>
+</ul>
+<img src='/images/ga/main.png' />
+
+<ul>
+<li>个人<ul>
+<li>点击左上角个人头像,会复制个人ID到剪贴板，用来给作者帮你开通团长权限。</li>
+</ul>
+</li>
+</ul>
+<img src='/images/ga/user.png' />
+
+<ul>
+<li>创建团队</li>
+</ul>
+<img src='/images/ga/create.png' />
+
+<ul>
+<li>登记团队</li>
+</ul>
+<img src='/images/ga/add.png' />
+
+<ul>
+<li>分享<ul>
+<li>可以直接将团队登记面板通过微信发送给团队成员，点击链接直接登记信息</li>
+</ul>
+</li>
+</ul>
+<img src='/images/ga/share.png'>
+
+<h2 id="联系作者-添加团长权限、反馈BUG等"><a href="#联系作者-添加团长权限、反馈BUG等" class="headerlink" title="联系作者(添加团长权限、反馈BUG等)"></a>联系作者(添加团长权限、反馈BUG等)</h2><ul>
+<li>QQ：957638221</li>
+<li>微信: Wen_Christian</li>
+</ul>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p><input type='checkbox' /> 团队人员出勤统计<br><input type='checkbox' /> 模板云端保存<br><input type='checkbox' /> 新的团队管理模式<br><input type='checkbox' /> 团长权限分享<br><input type='checkbox' /> 一键报名/取消</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
 </search>
