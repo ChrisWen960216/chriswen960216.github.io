@@ -196,7 +196,124 @@
 <li>QQ：957638221</li>
 <li>微信: Wen_Christian</li>
 </ul>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p><input type='checkbox' /> 团队人员出勤统计<br><input type='checkbox' /> 模板云端保存<br><input type='checkbox' /> 新的团队管理模式<br><input type='checkbox' /> 团长权限分享<br><input type='checkbox' /> 一键报名/取消</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p><input type='checkbox' checked/> 团队人员出勤统计<br><input type='checkbox' checked/> 模板云端保存<br><input type='checkbox' checked/> 新的团队管理模式<br><input type='checkbox' /> 团长权限分享<br><input type='checkbox' /> 一键报名/取消</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固定团智能计划使用介绍</title>
+    <url>/2020/11/23/%E5%9B%BA%E5%AE%9A%E5%9B%A2%E6%99%BA%E8%83%BD%E8%AE%A1%E5%88%92%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<blockquote>
+<p>固定团智能计划（简称：开团小助手）简单使用介绍</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>本小程序虽然基于QQ/微信，但并未收集用户的任何敏感信息（包括但不限于QQ号、微信号、手机等），仅通过唯一用户ID进行身份区分。</p>
+<p>本小程序仅需要用户授权您登记于QQ上的公开身份资料如：昵称、头像，皆保存于本地，云端数据库不做存储。</p>
+<p>您可以点击右上角胶囊按钮-用户信息取消授权。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>微信搜索: <code>固定团智能计划</code></p>
+</li>
+<li><p>QQ搜索: <code>开团小助手</code></p>
+</li>
+<li><p>直接用微信扫描该二维码直接打开.</p>
+</li>
+</ul>
+<img src='/images/ga/qrcode.jpg' />
+
+<ul>
+<li>直接用QQ扫描该二维码打开.</li>
+</ul>
+<img src='/images/ga/qq_qrcode.jpeg'>
+
+
+<h2 id="团长"><a href="#团长" class="headerlink" title="团长"></a>团长</h2><p>注意：本使用说明的平台为QQ小程序，微信小程序操作相同，不再重复说明。</p>
+<h3 id="1-登录-（必须）"><a href="#1-登录-（必须）" class="headerlink" title="1. 登录 （必须）"></a>1. 登录 （必须）</h3><p>  <span style='color: red;'>点击首页的 立即体验 按钮登录。</span></p>
+<p>  团长角色必须登录用以后台记录权限。</p>
+<p>  初次使用本小程序，需要您授权小程序使用您登记于QQ的公开资料，上述《声明》已经列出，不再展开叙述。</p>
+<h3 id="2-用户中心界面"><a href="#2-用户中心界面" class="headerlink" title="2. 用户中心界面"></a>2. 用户中心界面</h3>  <img src='/images/ga_introduce/user.jpeg'>
+
+<p>  我要开团 - 提供团长开团功能</p>
+<p>  出勤统计 - 提供团长查看您参加您组织的团队的团员出勤情况</p>
+<p>  用户详情 - 展示用户ID，即更新固定团团员名称</p>
+<p>  我的团队 - 查找您创建过的团队</p>
+<p>  我要参团 - 通过团队ID进行搜索并加入一个团</p>
+<p>  模板管理 - 对于 权限·排表 类型的团队的模板管理</p>
+<p>  关于我们&amp;&amp;疑难解答 - 展示页</p>
+<h3 id="3-更新用户详情-（非必须，推荐）"><a href="#3-更新用户详情-（非必须，推荐）" class="headerlink" title="3. 更新用户详情 （非必须，推荐）"></a>3. 更新用户详情 （非必须，推荐）</h3>  <img src='/images/ga_introduce/user_info.jpeg'>
+
+<p>  <span style='color: red;'>点击用户详情。</span></p>
+<p>  用户ID作为唯一表示符，您不需要对此进行任何操作，仅在出现BUG时方便开发者追踪。</p>
+<p>  您可以于此填写您的团员ID，更新后的团员ID将会出现在团长的考勤列表上展示（如果不更新，将展示为匿名）为了方便追踪和管理，强烈建议您更新。</p>
+<h3 id="4-开团-（核心）"><a href="#4-开团-（核心）" class="headerlink" title="4. 开团 （核心）"></a>4. 开团 （核心）</h3>  <img src='/images/ga_introduce/group_mode.jpeg'>
+
+<p>  <span style='color: red;'>点击我要开团。</span></p>
+<p>  简单排表模式 - 非常简单的操作，类似于表格的共享登记。及其简单方便，但是功能也很有限</p>
+<p>  权限排表模式 - 推荐模式，可以追踪团员、展示考勤等。后续介绍将基于此模式</p>
+  <img src='/images/ga_introduce/group_panel.jpeg'>
+
+<p>  团队名称 - 副本名称，目前仅支持25普通达摩洞和英雄达摩洞</p>
+<p>  启用权限 - 启用后可以进行追踪，建议开启</p>
+<p>  团队面板 - 团队成员登记处</p>
+<p>  备注 - 添加本团的注意事项，他会在分享时被优先给出</p>
+  <img src='/images/ga_introduce/panel_item.jpeg'>
+
+<p>  团队面板的每一个格子被分为了3个模块，分别是心法、角色和团员。</p>
+<p>  这三个模块并没有强绑定，这意味着：</p>
+<p>  团长填写职业为傲血</p>
+<p>  团员A填写角色</p>
+<p>  团员A填写团员</p>
+<p>  <span style='color: blue;'>适用场景：团长需要一个傲血，A登记参团，自己的号是傲血，自己也要打本。一般固定团报名会较多如此使用。</span></p>
+<p>  或者说：</p>
+<p>  团长填写职业为傲血</p>
+<p>  团员A填写角色</p>
+<p>  团员B填写团员</p>
+<p>  <span style='color: blue;'>适用场景：团长需要一个傲血，A于世界频道找到一个傲血老板号，但A本身并不打本（例如金团客服）。B是傲血打手，则B可以认领该号并进行游戏。适用于金团/代清等</span></p>
+<p>  或者说：</p>
+<p>  团员A填写职业为傲血</p>
+<p>  团员B填写角色</p>
+<p>  团员A填写团员</p>
+<p>  <span style='color: blue;'>适用场景：A是代清，但是A没有天策号。B是号主，但是B只想提供自己的账号不想打本。适用于金团/代清等</span></p>
+<p>  当团长创建完成之后，可以将自己的设置保存为模板，后续可以复用本配置而不需要重新设置。</p>
+<p>  <span style='color:red;'>而后可以点击右上角的胶囊按钮（三个点），将本团队面板分享到群内/好友，团员点击分享的小程序进去填写自己的信息。</span></p>
+<p>  而一个完整的报名结束后可能会是如下的样子:</p>
+  <img src='/images/ga_introduce/group_detail.jpeg'>
+
+<p>  <span style='color:red;'>数据来源: 电信八区 - 剑湖宫</span></p>
+<p>  其画横线的即代表尚缺，例如此时明教T由黎安宁上号但是仍然需要一个人提供明教T的号。而衍天虽然有号却没有打手。</p>
+<p>  点击保存模板 - 则将此时此刻所有的团员信息进行保存。后续可以通过用户界面的 - 模板管理直接复用，或者于团队创建界面 点击 - 使用模板 进行复用。</p>
+<p>  模板保存可以在团队创建之后-团队锁定之前的任意时刻进行。</p>
+<p>  结束报名 - 点击结束报名之后，该团的信息将被封存并且不能被任何人修改（团长也不能改），其打手将被计入考勤展示于考勤面板上。</p>
+<h3 id="5-权限-（核心）"><a href="#5-权限-（核心）" class="headerlink" title="5. 权限 （核心）"></a>5. 权限 （核心）</h3><p>  如果开启了权限管理，那么团队列表将会严格控制权限，举例来说：</p>
+<p>  团员A填写职业为傲血</p>
+<p>  团员B填写角色</p>
+<p>  团员一栏是空着的</p>
+<p>  那么团员A可以修改职业一栏，团员B可以修改角色一栏。除此之外，任何其他团员都无权修改任何一栏。</p>
+<p>  但是任意团员都可以填写团员一栏。</p>
+<p>  团长总是可以修改所有信息，而且经由团长修改过的信息则所有团员都无权修改。</p>
+<p>  <span style='color:red;'>简单地说：空白栏大家都可以填，但是自己只能修改自己填过的信息。</span></p>
+<p>  <span style='color:red;'>团长可以修改所有的信息，但是一经团长修改则所有团员都无权再次修改。</span></p>
+<h3 id="6-考勤"><a href="#6-考勤" class="headerlink" title="6. 考勤"></a>6. 考勤</h3><p>  于考勤列表页可以看到所有参加团队团员的出勤情况，按照从高到低的次序进行排列。如果团员没有更新自己的团队ID，则会显示匿名。</p>
+<h2 id="团员"><a href="#团员" class="headerlink" title="团员"></a>团员</h2><h3 id="1-登录-（必须）-1"><a href="#1-登录-（必须）-1" class="headerlink" title="1. 登录 （必须）"></a>1. 登录 （必须）</h3><p>  <span style='color: red;'>点击首页的 立即体验 按钮登录。</span></p>
+<p>  团长角色必须登录用以后台记录权限。</p>
+<p>  初次使用本小程序，需要您授权小程序使用您登记于QQ的公开资料，上述《声明》已经列出，不再展开叙述。</p>
+<h3 id="2-更新用户详情-（非必须，推荐）"><a href="#2-更新用户详情-（非必须，推荐）" class="headerlink" title="2. 更新用户详情 （非必须，推荐）"></a>2. 更新用户详情 （非必须，推荐）</h3>  <img src='/images/ga_introduce/user_info.jpeg'>
+
+<p>  <span style='color: red;'>点击用户详情。</span></p>
+<p>  用户ID作为唯一表示符，您不需要对此进行任何操作，仅在出现BUG时方便开发者追踪。</p>
+<p>  您可以于此填写您的团员ID，更新后的团员ID将会出现在团长的考勤列表上展示（如果不更新，将展示为匿名）为了方便追踪和管理，强烈建议您更新。</p>
+<h3 id="3-报名"><a href="#3-报名" class="headerlink" title="3. 报名"></a>3. 报名</h3><p>  点击团长分享到群里的小程序，进行登记（如果尚未登录，则会自动返回到主页，登录之后方可填写）</p>
+<p>  请注意：您只能填写空白项，无权修改别人所填写的内容。</p>
+<h2 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h2><p>如果您有BUG或者什么好的建议反馈 欢迎联系作者，或者加入我们的反馈群:</p>
+<p>QQ: 957638221</p>
+<p>微信：Wen_Christian</p>
+<p>QQ群: 1062571121</p>
 ]]></content>
       <categories>
         <category>技术</category>
