@@ -6,7 +6,7 @@
   <link href="https://chriswen96.com/atom.xml" rel="self"/>
   
   <link href="https://chriswen96.com/"/>
-  <updated>2020-11-23T06:47:34.875Z</updated>
+  <updated>2021-01-13T09:20:34.683Z</updated>
   <id>https://chriswen96.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>监听本地端口</title>
+    <link href="https://chriswen96.com/2021/01/13/%E7%9B%91%E5%90%AC%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3/"/>
+    <id>https://chriswen96.com/2021/01/13/%E7%9B%91%E5%90%AC%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3/</id>
+    <published>2021-01-13T07:22:51.000Z</published>
+    <updated>2021-01-13T09:20:34.683Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;端口被占用了，但是CLI是怎么知道的？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;知其然，需知其所以然。因公司架构重组，前端分崩离析，缺乏统一的前端组来维护各类&lt;code&gt;legacy&lt;/code&gt;工具，求人不如求己，遂决定通读并分析现行使用的各类内部库，以期了解项目的基本架构。&lt;/p&gt;
+&lt;p&gt;本篇是第一篇，监听本地端口。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://chriswen96.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="https://chriswen96.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>固定团智能计划使用介绍</title>
